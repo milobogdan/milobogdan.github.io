@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kistl – privacy policy</title>
+<meta name="description" content="How the Kistl backup tool accesses, uses, stores and shares Google user data.">
+<style>
+  :root { --blue: #2563eb; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; --bg: #f3f4f6; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 26px 30px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  .muted { color: var(--muted); margin: 0 0 20px; }
+  h2 { font-size: 18px; margin: 26px 0 6px; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  a { color: var(--blue); }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="./">&larr; Kistl</a></p>
+  <div class="card">
+    <h1>Privacy policy</h1>
+    <p class="muted">Kistl backup tool &middot; last updated 25 October 2026</p>
+
+    <p>Kistl is a personal backup tool that runs on a Windows PC. This policy explains what happens to data,
+      including Google user data, when Kistl is used.</p>
+
+    <h2>Summary</h2>
+    <p>Kistl collects no personal data. It has no servers, no accounts, no analytics and no advertising.
+      Everything it does happens on the user's own PC and in the user's own storage.</p>
+
+    <h2>Google user data Kistl accesses</h2>
+    <ul>
+      <li>Kistl requests only the Google Drive scope <code>https://www.googleapis.com/auth/drive.file</code>. With it,
+        Kistl can create files and folders in the user's Google Drive and read, change or delete only those
+        files and folders that Kistl itself created. It cannot see any other file in the user's Drive.</li>
+      <li>To show how much storage is left, Kistl reads the storage quota and the account's email address from the
+        Google Drive API. These are shown on the user's screen only and are not stored or sent anywhere.</li>
+    </ul>
+
+    <h2>How Kistl uses that data</h2>
+    <ul>
+      <li>Kistl uploads backup copies of folders the user chooses, downloads them again when the user restores
+        or checks a backup, and removes old backup copies according to the user's retention settings.</li>
+      <li>Before any file leaves the PC, Kistl encrypts it with AES-256 using a key that is created and kept on the
+        user's PC. File contents and file names stored in Google Drive are therefore unreadable to Google and to
+        anyone else without that key.</li>
+      <li>Google user data is used for nothing else: not for advertising, profiling, analytics or training any
+        kind of model.</li>
+    </ul>
+
+    <h2>Storage</h2>
+    <ul>
+      <li>The Google sign-in token and the encryption key are stored only on the user's PC, in Windows Credential
+        Manager.</li>
+      <li>Backups are stored only in the user's own Google Drive (and on the user's own drives or NAS, if
+        configured).</li>
+    </ul>
+
+    <h2>Sharing</h2>
+    <p>Kistl does not share, sell or transfer any data to anyone. Data travels only directly between the user's
+      PC and Google, over an encrypted (HTTPS) connection.</p>
+
+    <h2>Deleting data and revoking access</h2>
+    <ul>
+      <li>"Sign out" in Kistl revokes its access at Google and removes the sign-in token from the PC.</li>
+      <li>Access can also be removed at any time in the Google Account under
+        <a href="https://myaccount.google.com/permissions">Third-party apps &amp; services</a>.</li>
+      <li>Backups in Google Drive can be deleted by the user in Google Drive at any time.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy can be sent to the support email address shown on Google's sign-in
+      screen for Kistl.</p>
+  </div>
+</main>
+</body>
+</html>

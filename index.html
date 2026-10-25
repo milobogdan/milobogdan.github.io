@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kistl – personal backup tool</title>
+<meta name="description" content="Kistl is a small personal backup tool for Windows. It keeps encrypted backups in the user's own Google Drive.">
+<style>
+  :root { --blue: #2563eb; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; --bg: #f3f4f6; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 20px 64px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  h1 { font-size: 34px; margin: 0; }
+  .tag { color: var(--muted); margin: 2px 0 0; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 22px 26px; margin-bottom: 16px; }
+  h2 { font-size: 18px; margin: 0 0 8px; }
+  ul { margin: 8px 0 0; padding-left: 20px; }
+  a { color: var(--blue); }
+  footer { color: var(--muted); font-size: 14px; margin-top: 28px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <svg width="56" height="56" viewBox="0 0 64 64" aria-hidden="true">
+      <rect width="64" height="64" rx="14" fill="#2563eb"/>
+      <rect x="13" y="22" width="38" height="28" rx="3" fill="#fff"/>
+      <rect x="11" y="14" width="42" height="11" rx="4" fill="#fff"/>
+      <rect x="13" y="22" width="38" height="3" fill="#2563eb"/>
+      <rect x="28" y="22" width="8" height="11" rx="2" fill="#fbbf24"/>
+    </svg>
+    <div>
+      <h1>Kistl</h1>
+      <p class="tag">Your files, safely tucked away</p>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2>What Kistl is</h2>
+    <p>Kistl is a small backup tool for Windows, made for personal use. It copies the folders its user chooses
+      to a local or external drive, a NAS on the home network, and optionally to that user's own Google Drive.
+      "Kistl" is Austrian and Bavarian for a small chest.</p>
+  </div>
+
+  <div class="card">
+    <h2>How it uses Google Drive</h2>
+    <ul>
+      <li>Files are <strong>encrypted on the user's PC</strong> (AES-256) before anything is uploaded. Google only
+        stores unreadable data.</li>
+      <li>Kistl asks only for the <code>drive.file</code> permission: it can see only the files and folders it
+        created itself, never anything else in the user's Drive.</li>
+      <li>There is no Kistl server. The app talks directly from the user's PC to Google.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Privacy</h2>
+    <p>Kistl collects no data about anyone. Read the <a href="privacy.html">privacy policy</a>.</p>
+  </div>
+
+  <footer>Kistl is a personal, non-commercial project. It is not affiliated with Google.</footer>
+</main>
+</body>
+</html>
